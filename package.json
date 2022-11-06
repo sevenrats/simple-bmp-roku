@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "ropm": "^0.10.10"
-  },
   "name": "simple-bmp",
   "ropm": {
     "packageRootDir": "src"
