@@ -24,7 +24,7 @@ function _rdINTtoHEX(num as integer) as object
   return ba.toHexString().Right(2)
 end function
 
-function bytearray(width as integer, height as integer, pixels) as roByteArray 'pixels should be an roList of [r.g.b] arrays read top to bottom and left to right
+function bytearray(width as integer, height as integer, pixels) 'pixels should be an roList of [r.g.b] arrays read top to bottom and left to right
   pad = width mod 4
   if pad <> 0
     pad = 4-pad
@@ -40,6 +40,7 @@ function bytearray(width as integer, height as integer, pixels) as roByteArray '
     if pad <> 0
       for z = 1 to pad
         row=row+"00"
+      end for
     end if
     bmp = bmp + row
   end for
